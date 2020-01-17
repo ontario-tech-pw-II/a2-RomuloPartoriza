@@ -1,12 +1,20 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
 int main(int argc, char const *argv[])
 {
  	ifstream fin;
  	ofstream fout;
 	
-	// check if there are enough arguments
+	int i;
 	
+	if(argc < 3){ // check if there are enough arguments
+		cout << "Not enough arguments" << endl;
+	}
 	
-	// open the first file
+	fin.open(argv[1]);// open the first file
  	
 	char c;
 
@@ -17,7 +25,7 @@ int main(int argc, char const *argv[])
  	}
  	
 
-	// open the second file
+	fout.open(argv[2]);// open the second file
 	
  	if (fout.fail())
  	{
