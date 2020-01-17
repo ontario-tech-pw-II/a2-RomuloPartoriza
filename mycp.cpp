@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 	int i;
 	
 	if(argc < 3){ // check if there are enough arguments
-		cout << "Not enough arguments" << endl;
+		cerr << "Not enough arguments." << endl;
 	}
 	
 	fin.open(argv[1]);// open the first file
